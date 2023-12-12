@@ -8,6 +8,8 @@ img {
 }
 .logo {
   width: 100px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 .background {
@@ -34,4 +36,7 @@ img {
 .search_icon {
   background-color: #e41e56;
   padding: 15px;
+}
+.text-dark {
+  color: black !important;
 }
