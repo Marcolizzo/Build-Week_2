@@ -1,3 +1,33 @@
+.navbar img{
+    object-fit: contain;
+}
+.navbar {
+  color: white;
+}
+.navbar p{
+  font-size: 0.4em;
+}
+button.rounded-pill{
+  border: 1px solid black;
+  padding-inline: 2px;
+}
+.small{
+  font-size: small;
+}
+.x-small{
+  font-size: x-small;
+}
+.xx-small{
+  font-size: xx-small;
+}
+.navbar .search-nav{
+  color: black;
+}
+.search-nav ion-icon{
+  background-color: #FF385C!important;
+  color: white;
+  font-size: xx-small;
+}
 h1 {
   font-size: 100pt;
 }
