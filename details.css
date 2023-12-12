@@ -1,0 +1,23 @@
+/*CARD*/
+.card {
+    font-family: montserrat;
+  }
+  
+  p {
+    font-size: 9pt !important;
+  }
+  
+  .carousel-icons {
+    position: absolute;
+    z-index: 1;
+    top: 7%;
+    right: 8%;
+    color: gray;
+  }
+  
+  div .carousel-indicators button {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50%;
+  }
+  
