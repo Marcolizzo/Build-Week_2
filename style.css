@@ -3,6 +3,9 @@ h1 {
   /* margin-block: 30%; */
   line-height: 120px;
 }
+body {
+  overflow-x: hidden;
+}
 img {
   object-fit: cover;
 }
@@ -18,6 +21,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 1300px;
+  max-height: 1200px;
 }
 
 .navbar * {
