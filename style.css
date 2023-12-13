@@ -25,6 +25,7 @@ button.rounded-pill{
 }
 .navbar .search-nav b{
   font-size: 0.4em;
+  color: black;
 }
 .search-nav ion-icon{
   background-color: #FF385C!important;
