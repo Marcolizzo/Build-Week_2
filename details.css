@@ -33,3 +33,6 @@ ion-icon {
 .fill__hearts {
   fill: red;
 }
+.heart:hover {
+  fill: red;
+}
