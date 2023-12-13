@@ -1,0 +1,12 @@
+.reservation-btn {
+  width: 100%;
+  font-weight: bolder;
+  background: rgb(97, 10, 106);
+  background: linear-gradient(
+    90deg,
+    rgba(97, 10, 106, 1) 0%,
+    rgba(69, 5, 136, 1) 100%
+  );
+  border: none;
+  padding-block: 10px;
+}
