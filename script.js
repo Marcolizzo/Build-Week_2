@@ -1441,7 +1441,11 @@ const insertCard = function () {
   }
 };
 insertCard();
-heart = document.querySelector(".heart");
-heart.onclick = function (e) {
-  e.target.toggle("pippo");
-};
+const hearts = document.querySelectorAll(".heart");
+
+// Cicla attraverso gli elementi e aggiungi il listener di eventi
+for (let i = 0; i < hearts.length; i++) {
+  hearts[i].addEventListener("click", function () {
+    this.classList.toggle("fill__hearts");
+  });
+}
