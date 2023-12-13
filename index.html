@@ -37,10 +37,10 @@
           </div>
           <div class="d-flex xx-small gap-2 align-items-center">
             <p class="m-0">Become a host</p>
-            <div><ion-icon name="globe-outline"></ion-icon></div>
+            <div class="d-flex"><ion-icon name="globe-outline"></ion-icon></div>
             <div>
-              <button type="button" class="align-items-center d-flex rounded-pill gap-1">
-                <ion-icon name="menu-outline"></ion-icon>
+              <button type="button" class="align-items-center d-flex rounded-pill gap-1 bg-white">
+                <ion-icon name="menu-outline" class="text-black"></ion-icon>
                 <ion-icon class="text-secondary small" name="person-circle"></ion-icon>
               </button>
             </div>
@@ -49,18 +49,38 @@
       
 
       <div class="search-nav w-50 mx-auto d-flex justify-content-center bg-black">
-        <div class="d-flex rounded-pill bg-light w-100">
-          <div class="rounded-pill w-75">
-            <div class="row align-items-center ps-2">
-              <div class="d-flex col-3 xx-small"><p><b>Location</b></p></div>
-              <div class="d-flex col-3 xx-small"><p><b>Check-in</b></p></div>
-              <div class="d-flex col-3 xx-small"><p><b>Check-out</b></p></div>
-              <div class="d-flex col-3 xx-small"><p><b>Guests</b></p></div>
+        <div class="d-flex rounded-pill bg-light  justify-content-around">
+
+          <div class="rounded-pill w-25" style="padding-bottom: 1.5px;">
+            <div class="xx-small row w-100">
+              <div class="col-12">
+                <b>Location</b>
+              </div>
+              <div class="col-12 pe-0">
+                <input class="w-100 p-0 d-flex" type="text" placeholder="Where are you going?">
+              </div>
+           </div>
+          </div>
+          <div class="rounded-pill w-75 row">
+            <div class="col-3 px-1 xx-small">
+              <b>Check-in</b>
+              <input class="w-100 p-0 d-flex" type="date">
+            </div>
+            <div class="col-3 px-1 xx-small">
+              <b>Check-out</b>
+              <input class="w-100 p-0 d-flex" type="date">
+            </div>
+            <div class="col-3 px-1 xx-small">
+              <b>Guests</b>
+              <input class="w-100 p-0 d-flex" type="text" placeholder="Add guests?">
+            </div>
+            <div class="col-3 d-flex justify-content-end pe-2">
+              <div class="d-flex align-items-center">
+                <ion-icon size="extra-small" class="p-1 rounded-circle" name="search-outline"></ion-icon>
+              </div>
             </div>
           </div>
-          <div class="d-flex justify-content-end align-items-center w-25 h-100">
-            <ion-icon size="extra-small" class="p-1 rounded-circle" name="search-outline"></ion-icon>
-          </div>
+          
         </div>
       </div>
 </nav>
@@ -72,44 +92,81 @@
           GO <br />
           NEAR
         </h1>
-      </div>
-    </header>
-
-    <div class="bg-white m-5">
-      <div class="row w-75 mx-auto">
-        <div class="col-3">
-          <div class="d-flex align-items-center">
-            <img src="./assets/propic.png" class="logo" alt="" />
+        <!-- </div> -->
+      </header>
+    </div>
+    <!-- FOOTER -->
+    <div class="bg-white mt-5">
+      <div class="row w-75 mx-auto flex-wrap">
+        <div class="col-lg-3 col-md-4 mb-4">
+          <div class="d-flex align-items-center gap-3">
+            <img src="./assets/Città.jpg" class="logo rounded-4" alt="" />
             <div>
-              <p class="m-0">Genova</p>
-              <p>15 mins Drive</p>
+              <p class="mt-2 mb-1 fw-bold fs-5">Genova</p>
+              <p class="mb-1 fs-5 fw-light">15 mins drive</p>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="d-flex align-items-center">
-            <img src="./assets/propic.png" class="logo" alt="" />
+        <div class="col-lg-3 col-md-4">
+          <div class="d-flex align-items-center gap-3">
+            <img src="./assets/Fiume.jpg" class="logo rounded-4" alt="" />
             <div>
-              <p class="m-0">Genova</p>
-              <p>15 mins Drive</p>
+              <p class="mt-2 mb-1 fw-bold fs-5">Inverness</p>
+              <p class="mb-1 fs-5 fw-light">2 hrs flight</p>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="d-flex align-items-center">
-            <img src="./assets/propic.png" class="logo" alt="" />
+        <div class="col-lg-3 col-md-4">
+          <div class="d-flex align-items-center gap-3">
+            <img src="./assets/Città.jpg" class="logo rounded-4" alt="" />
             <div>
-              <p class="m-0">Genova</p>
-              <p>15 mins Drive</p>
+              <p class="mt-2 mb-1 fw-bold fs-5">Edimburgh</p>
+              <p class="mb-1 fs-5 fw-light">1.5 hrs flight</p>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="d-flex align-items-center">
-            <img src="./assets/propic.png" class="logo" alt="" />
+        <div class="col-lg-3 col-md-4">
+          <div class="d-flex align-items-center gap-3">
+            <img src="./assets/Spiaggia.png" class="logo rounded-4" alt="" />
             <div>
-              <p class="m-0">Genova</p>
-              <p>15 mins Drive</p>
+              <p class="mt-2 mb-1 fw-bold fs-5">Rapallo</p>
+              <p class="mb-1 fs-5 fw-light">2 hrs drive</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="d-flex align-items-center gap-3">
+            <img src="./assets/Fiume.jpg" class="logo rounded-4" alt="" />
+            <div>
+              <p class="mt-2 mb-1 fw-bold fs-5">Milan</p>
+              <p class="mb-1 fs-5 fw-light">1.5 hrs drive</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="d-flex align-items-center gap-3">
+            <img src="./assets/Città.jpg" class="logo rounded-4" alt="" />
+            <div>
+              <p class="mt-2 mb-1 fw-bold fs-5">Montecarlo</p>
+              <p class="mb-1 fs-5 fw-light">2 hr drive</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="d-flex align-items-center gap-3">
+            <img src="./assets/Spiaggia.png" class="logo rounded-4" alt="" />
+            <div>
+              <p class="mt-2 mb-1 fw-bold fs-5">Kirkwall</p>
+              <p class="mb-1 fs-5 fw-light">1 hr drive</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="d-flex align-items-center gap-3">
+            <img src="./assets/Fiume.jpg" class="logo rounded-4" alt="" />
+            <div>
+              <p class="mt-2 mb-1 fw-bold fs-5">Nordkapp</p>
+              <p class="mb-1 fs-5 fw-light">10 hrs flight</p>
             </div>
           </div>
         </div>

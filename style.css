@@ -23,17 +23,64 @@ button.rounded-pill{
 .navbar .search-nav{
   color: black;
 }
+.navbar .search-nav b{
+  font-size: 0.4em;
+  color: black;
+}
 .search-nav ion-icon{
   background-color: #FF385C!important;
   color: white;
   font-size: xx-small;
 }
+.search-nav input{
+  font-size: 0.4em;
+  border: none;
+  outline: none;
+  color: gray;
+}
 h1 {
   font-size: 100pt;
+  /* margin-block: 30%; */
+  line-height: 120px;
+}
+body {
+  overflow-x: hidden;
 }
 img {
   object-fit: cover;
 }
 .logo {
   width: 100px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.background {
+  background-image: url(/assets/home.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 1300px;
+  max-height: 1200px;
+}
+
+.navbar * {
+  color: white;
+}
+
+.search {
+  min-width: 860px;
+  border-radius: 500px;
+}
+
+.search p {
+  margin-block: 10px;
+}
+
+.search_icon {
+  background-color: #e41e56;
+  padding: 15px;
+}
+.text-dark {
+  color: black !important;
 }
