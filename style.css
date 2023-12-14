@@ -1,72 +1,42 @@
-.navbar img{
-    object-fit: contain;
+/* NAVBAR */
+.navbar img {
+  object-fit: contain;
 }
-header{
-  background-color: black;
-}
+
 .navbar {
   width: 90%;
   margin-inline: auto;
 }
-.navbar p{
+
+.navbar p {
   font-size: 0.9em;
 }
-button.rounded-pill{
+
+button.rounded-pill {
   border: 1px solid black;
   padding-inline: 2px;
 }
-.small{
-  font-size: small;
-}
-.x-small{
-  font-size: x-small;
-}
-.xx-small{
-  font-size: xx-small;
-}
-.navbar .search-nav{
+
+.navbar .search-nav {
   color: black;
 }
-.navbar .search-nav b{
+
+.navbar .search-nav b {
   color: black;
   font-size: 0.8em;
-  
 }
-.search-nav ion-icon{
-  background-color: #FF385C!important;
+
+.search-nav ion-icon {
+  background-color: #ff385c !important;
   color: white;
   font-size: xx-small;
 }
-.search-nav input{
+
+.search-nav input {
   border: none;
   outline: none;
   color: gray;
   font-size: 0.9em;
-}
-h1 {
-  font-size: 100pt;
-  /* margin-block: 30%; */
-  line-height: 120px;
-}
-body {
-  overflow-x: hidden;
-}
-img {
-  object-fit: cover;
-}
-.logo {
-  width: 100px;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-}
-
-.background {
-  background-image: url(/assets/home.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 1300px;
-  max-height: 1200px;
 }
 
 .navbar * {
@@ -87,3 +57,57 @@ img {
   padding: 15px;
 }
 
+/* ALTRO */
+header {
+  background-color: black;
+}
+
+.small {
+  font-size: small;
+}
+
+/* .x-small{
+  font-size: x-small;
+}
+
+.xx-small{
+  font-size: xx-small;
+} */
+
+h1 {
+  font-size: 100pt;
+  /* margin-block: 30%; */
+  line-height: 120px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  object-fit: cover;
+}
+
+.logo {
+  width: 100px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.background {
+  background-image: url(/assets/home.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 1300px;
+  max-height: 1200px;
+}
+
+.link-item-hover {
+  color: black;
+  text-decoration: none;
+}
+
+.link-item-hover:hover {
+  text-decoration: underline black;
+}

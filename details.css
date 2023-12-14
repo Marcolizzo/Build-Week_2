@@ -1,3 +1,23 @@
+/* NAVBAR */
+.navbar img {
+  object-fit: contain;
+}
+
+.navbar {
+  width: 90%;
+  margin-inline: auto;
+}
+
+.navbar p {
+  font-size: 0.9em;
+}
+
+button.rounded-pill {
+  border: 1px solid black;
+  padding-inline: 2px;
+}
+
+
 /*CARD*/
 .card {
   font-family: montserrat;
