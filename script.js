@@ -1334,7 +1334,7 @@ const homes = [
 const insertCard = function () {
   for (let i = 0; i < homes.length; i++) {
     const home = homes[i];
-    row = document.querySelector(".row");
+    row = document.querySelector(".card-collector");
     row.innerHTML += `<div class="col-lg-3 col-md-6">
     <div class="card border-0" style="width: 18rem" id="pippo">
       <div class="card-img-top">
@@ -1433,7 +1433,7 @@ const insertCard = function () {
         `#carouselExampleIndicators${i} .carousel-inner`
       );
       carousel.innerHTML += `
-    <div class="carousel-item ${x === 0 ? "active" : ""}">
+    <div id="${home.id}" class="carousel-item ${x === 0 ? "active" : ""}">
       <img src="${home.picture_urls[x]}" class="d-block w-100" alt="..." />
     </div>`;
     }
@@ -1446,4 +1446,22 @@ for (let i = 0; i < hearts.length; i++) {
   hearts[i].addEventListener("click", function () {
     this.classList.toggle("fill__hearts");
   });
+}
+
+const openPage = function(id){
+  window.location.href = 'card-detail-page.html?id=' + id
+}
+const link = function(event){
+
+  for (let i = 0; i < homes.length; i++) {
+    if (event.target.parentElement.id === homes[i].id) {
+      openPage(homes[i].id)
+      break;
+    }
+  }
+}
+const cards_img = document.querySelectorAll('.card-collector .carousel-item img');
+for (let i = 0; i < cards_img.length; i++) {
+    cards_img[i].addEventListener("click", link);
+    
 }

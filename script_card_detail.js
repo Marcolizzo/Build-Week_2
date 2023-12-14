@@ -1332,338 +1332,343 @@ let homes = [
 ];
 const template = function () {
   main = document.querySelector("#main");
-  let htmlString = "";
+  // let htmlString = "";
   for (let i = 0; i < homes.length; i++) {
-    const home = homes[i];
-
-    htmlString = `<div class="d-flex flex-column"
-      <h2 class="m-0">${home.name}</h2>
-      <div class="d-flex justify-content-between align-items-center">
-        <a href="" class="text-black">${home.street}</a>
-        <div class="d-flex align-items-center">
-          <button type="button" class="btn btn-light border-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-box-arrow-up"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z"
-              />
-            </svg>
-            <a href="" class="text-black ps-1">Condividi</a>
-          </button>
-          <button type="button" class="btn btn-light border-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-heart"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
-              />
-            </svg>
-            <a href="" class="text-black ps-1">Salva</a>
-          </button>
+    // const home = homes[i];
+    var params = new URLSearchParams(window.location.search);
+    var id = params.get('id')
+    if (id === homes[i].id ) {
+    main.innerHTML +=`<div class="d-flex flex-column"
+        <h2 class="m-0">${homes[i].name}</h2>
+        <div class="d-flex justify-content-between align-items-center">
+          <a href="" class="text-black">${homes[i].street}</a>
+          <div class="d-flex align-items-center">
+            <button type="button" class="btn btn-light border-0">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-box-arrow-up"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z"
+                />
+              </svg>
+              <a href="" class="text-black ps-1">Condividi</a>
+            </button>
+            <button type="button" class="btn btn-light border-0">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-heart"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                />
+              </svg>
+              <a href="" class="text-black ps-1">Salva</a>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  
-    <div class="card overflow-hidden rounded-4" style="height: 35rem">
-      <img src="./assets/1.webp" alt="" class="img-fluid" />
-    </div>
-  
-    <div class="row">
-      <aside class="col-6 d-flex flex-column gap-3">
-        <div class="d-flex flex-column gap-3 pt-4">
-          <h2>${home.name}</h2>
-          <ul class="d-flex gap-1 px-0">
-            <li class="list-group-item">14 ospiti</li>
-            <li class="list-group-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="2"
-                height="2"
-                fill="currentColor"
-                class="bi bi-circle-fill"
-                viewBox="0 0 16 16"
-              >
-                <circle cx="8" cy="8" r="8" />
-              </svg>
-            </li>
-            <li class="list-group-item">${home.bedrooms} camere da letto</li>
-            <li class="list-group-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="2"
-                height="2"
-                fill="currentColor"
-                class="bi bi-circle-fill"
-                viewBox="0 0 16 16"
-              >
-                <circle cx="8" cy="8" r="8" />
-              </svg>
-            </li>
-            <li class="list-group-item">${home.beds} letti</li>
-            <li class="list-group-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="2"
-                height="2"
-                fill="currentColor"
-                class="bi bi-circle-fill"
-                viewBox="0 0 16 16"
-              >
-                <circle cx="8" cy="8" r="8" />
-              </svg>
-            </li>
-            <li class="list-group-item">${home.bathrooms} bagni</li>
-          </ul>
-        </div>
-  
-        <div class="d-flex gap-5 pt-4 pb-4 border-top border-bottom">
-          <div class="ps-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
-              fill="currentColor"
-              class="bi bi-calendar-check"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"
-              />
-              <path
-                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
-              />
-            </svg>
-          </div>
-          <h5>Cancellazione gratuita entro il giorno 3 gennaio</h5>
-        </div>
-  
-        <div class="d-flex flex-column gap-4 pt-4 pb-5 border-bottom">
-          <div class="card p-2 px-3 bg-body-secondary border-0">
-            <p class="m-0">
-              Alcune informazioni sono state tradotte automaticamente.
-            </p>
-            <a href="" class="text-black fw-bold"
-              >Mostra il testo nella lingua originale</a
-            >
-          </div>
-          <div>
-            <p class="fw-bold mb-0">Lo spazio</p>
-            <p>
-            ${home.description}
-            </p>
-            <div class="d-flex fw-bold gap-1">
-              <a href="" class="text-black">Mostra altro</a>
-              <div>
+    
+      <div class="card overflow-hidden rounded-4" style="height: 35rem">
+        <img src="./assets/1.webp" alt="" class="img-fluid" />
+      </div>
+    
+      <div class="row">
+        <aside class="col-6 d-flex flex-column gap-3">
+          <div class="d-flex flex-column gap-3 pt-4">
+            <h2>${homes[i].name}</h2>
+            <ul class="d-flex gap-1 px-0">
+              <li class="list-group-item">14 ospiti</li>
+              <li class="list-group-item">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
+                  width="2"
+                  height="2"
                   fill="currentColor"
-                  class="bi bi-chevron-right"
+                  class="bi bi-circle-fill"
                   viewBox="0 0 16 16"
                 >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                  />
+                  <circle cx="8" cy="8" r="8" />
                 </svg>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex gap-2">
-            <h5 class="fst-italic fw-normal">Ospitalità di</h5>
-            <h5>${home.host_name}</h5>
-          </div>
-          <div class="card overflow-hidden" style="height: 20rem">
-            <img src="${home.picture_urls[0]}" alt="" />
-          </div>
-          <div>
-            <button
-              type="button"
-              class="btn btn-outline-secondary fw-semibold"
-            >
-              Mostra tutte le foto
-            </button>
-          </div>
-        </div>
-  
-        <div class="d-flex flex-column gap-3 pt-4 pb-5 border-bottom">
-          <h5>Cosa troverai</h5>
-          <div class="d-flex justify-content-between">
-            <ul class="ps-0">
-              <li class="list-group-item pb-3">Accesso alla spiaggia</li>
-              <li class="list-group-item pb-3">
-                Servizio di pulizia disponibile durante il soggiorno
               </li>
-              <li class="list-group-item pb-3">Motoscafo</li>
-              <li class="list-group-item pb-3">Campo da tennis</li>
-              <li class="list-group-item pb-3">Wi-fi</li>
-            </ul>
-  
-            <ul class="ps-0">
-              <li class="list-group-item pb-3">Maggiordomo</li>
-              <li class="list-group-item pb-3">Cuoco</li>
-              <li class="list-group-item pb-3">Piscina</li>
-              <li class="list-group-item pb-3">Cucina</li>
-              <li class="list-group-item pb-3">
-                Telecamere di sicurezza presenti nella proprietà
+              <li class="list-group-item">${homes[i].bedrooms} camere da letto</li>
+              <li class="list-group-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2"
+                  height="2"
+                  fill="currentColor"
+                  class="bi bi-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
               </li>
+              <li class="list-group-item">${homes[i].beds} letti</li>
+              <li class="list-group-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2"
+                  height="2"
+                  fill="currentColor"
+                  class="bi bi-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
+              </li>
+              <li class="list-group-item">${homes[i].bathrooms} bagni</li>
             </ul>
           </div>
-          <div>
-            <button
-              type="button"
-              class="btn btn-outline-secondary fw-semibold"
-            >
-              Mostra tutti e 34 i servizi
-            </button>
-          </div>
-        </div>
-  
-        <div class="d-flex flex-column gap-2 pt-4 pb-5 border-bottom">
-          <div>
-            <h5>Servizi aggiuntivi</h5>
-            <p>
-              Dopo che avrai prenotato questo alloggio, un designer di
-              viaggi potrà organizzare qualsiasi servizio aggiuntivo tra
-              quelli elencati.
-            </p>
-          </div>
-  
-          <div class="d-flex justify-content-between">
-            <div class="d-flex gap-3">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  fill="currentColor"
-                  class="bi bi-airplane"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1c-.213 0-.458.158-.678.599"
-                  />
-                </svg>
-              </div>
-              <p>Trasferimento aeroportuale</p>
-            </div>
-  
-            <div class="d-flex gap-3">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  fill="currentColor"
-                  class="bi bi-cart4"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
-                  />
-                </svg>
-              </div>
-              <p>Trasferimento aeroportuale</p>
-            </div>
-          </div>
-  
-          <p class="pt-5">Vorresti richiedere un servizio che non trovi?</p>
-  
-          <div>
-            <button
-              type="button"
-              class="btn btn-outline-secondary fw-semibold"
-            >
-              Invia un messaggio a un desginer di viaggi
-            </button>
-          </div>
-        </div>
-  
-        <div class="d-flex flex-column gap-2 pt-4 pb-5 border-bottom">
-          <h5>7 notti a ${home.street}</h5>
-          <p>3 mar 2024 - 10 mar 2024</p>
-          <img src="./assets/ScreenShot Tool -20231213212034.png" alt="" />
-          <div class="d-flex justify-content-end">
-            <button
-              type="button"
-              class="btn btn-outline-secondary fw-semibold border-0"
-            >
-              Annulla date
-            </button>
-          </div>
-        </div>
-      </aside>
-  
-      <aside class="col-6 d-flex justify-content-center">
-        <div class="pt-4">
-          <div
-            class="card sticky-top rounded-4 p-4 shadow p-3 mb-5 bg-body-tertiary rounded"
-            style="width: 25rem"
-          >
-            <div class="card-body d-flex flex-column gap-3 p-0">
-              <div class="d-flex gap-2 align-items-center">
-                <h4 class="card-title">${home.price} €</h4>
-                <p class="text-body-secondary m-0 pb-1">notte</p>
-              </div>
-              <div class="d-flex justify-content-center">
-                <img
-                  src="./assets/ScreenShot Tool -20231213220011.png"
-                  alt=""
-                  class="w-100"
+    
+          <div class="d-flex gap-5 pt-4 pb-4 border-top border-bottom">
+            <div class="ps-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="currentColor"
+                class="bi bi-calendar-check"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"
                 />
-              </div>
-              <div class="d-flex justify-content-center">
-                <button
-                  type="button"
-                  class="btn btn-primary reservation-btn"
-                >
-                  Prenota
-                </button>
-              </div>
-              <div
-                class="d-flex flex-column text-center gap-2 border-bottom pb-2"
+                <path
+                  d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+                />
+              </svg>
+            </div>
+            <h5>Cancellazione gratuita entro il giorno 3 gennaio</h5>
+          </div>
+    
+          <div class="d-flex flex-column gap-4 pt-4 pb-5 border-bottom">
+            <div class="card p-2 px-3 bg-body-secondary border-0">
+              <p class="m-0">
+                Alcune informazioni sono state tradotte automaticamente.
+              </p>
+              <a href="" class="text-black fw-bold"
+                >Mostra il testo nella lingua originale</a
               >
-                <p class="m-0">
-                  Non riceverai alcun addebito in questa fase
-                </p>
-                <p class="m-0">
-                  Il prezzo totale del viaggio include l'IVA e tutti i costi
-                  applicabili
-                </p>
-                <div class="d-flex justify-content-between mt-3">
-                  <a href="" class="text-black">${
-                    home.price * 7
-                  } € x 7 notti</a>
-                  <p>${home.price} €</p>
+            </div>
+            <div>
+              <p class="fw-bold mb-0">Lo spazio</p>
+              <p>
+              ${homes[i].description}
+              </p>
+              <div class="d-flex fw-bold gap-1">
+                <a href="" class="text-black">Mostra altro</a>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    fill="currentColor"
+                    class="bi bi-chevron-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                    />
+                  </svg>
                 </div>
               </div>
-              <div class="d-flex justify-content-between pt-2">
-                <p class="fw-bold">Totale</p>
-                <p class="fw-bold">${home.price * 7} €</p>
+            </div>
+            <div class="d-flex gap-2">
+              <h5 class="fst-italic fw-normal">Ospitalità di</h5>
+              <h5>${homes[i].host_name}</h5>
+            </div>
+            <div class="card overflow-hidden" style="height: 20rem">
+              <img src="${homes[i].picture_urls[0]}" alt="" />
+            </div>
+            <div>
+              <button
+                type="button"
+                class="btn btn-outline-secondary fw-semibold"
+              >
+                Mostra tutte le foto
+              </button>
+            </div>
+          </div>
+    
+          <div class="d-flex flex-column gap-3 pt-4 pb-5 border-bottom">
+            <h5>Cosa troverai</h5>
+            <div class="d-flex justify-content-between">
+              <ul class="ps-0">
+                <li class="list-group-item pb-3">Accesso alla spiaggia</li>
+                <li class="list-group-item pb-3">
+                  Servizio di pulizia disponibile durante il soggiorno
+                </li>
+                <li class="list-group-item pb-3">Motoscafo</li>
+                <li class="list-group-item pb-3">Campo da tennis</li>
+                <li class="list-group-item pb-3">Wi-fi</li>
+              </ul>
+    
+              <ul class="ps-0">
+                <li class="list-group-item pb-3">Maggiordomo</li>
+                <li class="list-group-item pb-3">Cuoco</li>
+                <li class="list-group-item pb-3">Piscina</li>
+                <li class="list-group-item pb-3">Cucina</li>
+                <li class="list-group-item pb-3">
+                  Telecamere di sicurezza presenti nella proprietà
+                </li>
+              </ul>
+            </div>
+            <div>
+              <button
+                type="button"
+                class="btn btn-outline-secondary fw-semibold"
+              >
+                Mostra tutti e 34 i servizi
+              </button>
+            </div>
+          </div>
+    
+          <div class="d-flex flex-column gap-2 pt-4 pb-5 border-bottom">
+            <div>
+              <h5>Servizi aggiuntivi</h5>
+              <p>
+                Dopo che avrai prenotato questo alloggio, un designer di
+                viaggi potrà organizzare qualsiasi servizio aggiuntivo tra
+                quelli elencati.
+              </p>
+            </div>
+    
+            <div class="d-flex justify-content-between">
+              <div class="d-flex gap-3">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    fill="currentColor"
+                    class="bi bi-airplane"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1c-.213 0-.458.158-.678.599"
+                    />
+                  </svg>
+                </div>
+                <p>Trasferimento aeroportuale</p>
+              </div>
+    
+              <div class="d-flex gap-3">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    fill="currentColor"
+                    class="bi bi-cart4"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+                    />
+                  </svg>
+                </div>
+                <p>Trasferimento aeroportuale</p>
+              </div>
+            </div>
+    
+            <p class="pt-5">Vorresti richiedere un servizio che non trovi?</p>
+    
+            <div>
+              <button
+                type="button"
+                class="btn btn-outline-secondary fw-semibold"
+              >
+                Invia un messaggio a un desginer di viaggi
+              </button>
+            </div>
+          </div>
+    
+          <div class="d-flex flex-column gap-2 pt-4 pb-5 border-bottom">
+            <h5>7 notti a ${homes[i].street}</h5>
+            <p>3 mar 2024 - 10 mar 2024</p>
+            <img src="./assets/ScreenShot Tool -20231213212034.png" alt="" />
+            <div class="d-flex justify-content-end">
+              <button
+                type="button"
+                class="btn btn-outline-secondary fw-semibold border-0"
+              >
+                Annulla date
+              </button>
+            </div>
+          </div>
+        </aside>
+    
+        <aside class="col-6 d-flex justify-content-center">
+          <div class="pt-4">
+            <div
+              class="card sticky-top rounded-4 p-4 shadow p-3 mb-5 bg-body-tertiary rounded"
+              style="width: 25rem"
+            >
+              <div class="card-body d-flex flex-column gap-3 p-0">
+                <div class="d-flex gap-2 align-items-center">
+                  <h4 class="card-title">${homes[i].price} €</h4>
+                  <p class="text-body-secondary m-0 pb-1">notte</p>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <img
+                    src="./assets/ScreenShot Tool -20231213220011.png"
+                    alt=""
+                    class="w-100"
+                  />
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button
+                    type="button"
+                    class="btn btn-primary reservation-btn"
+                  >
+                    Prenota
+                  </button>
+                </div>
+                <div
+                  class="d-flex flex-column text-center gap-2 border-bottom pb-2"
+                >
+                  <p class="m-0">
+                    Non riceverai alcun addebito in questa fase
+                  </p>
+                  <p class="m-0">
+                    Il prezzo totale del viaggio include l'IVA e tutti i costi
+                    applicabili
+                  </p>
+                  <div class="d-flex justify-content-between mt-3">
+                    <a href="" class="text-black">${
+                      homes[i].price * 7
+                    } € x 7 notti</a>
+                    <p>${homes[i].price} €</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                  <p class="fw-bold">Totale</p>
+                  <p class="fw-bold">${homes[i].price * 7} €</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </aside>
-    </div>`;
+        </aside>
+      </div>`;      
+    }
+
   }
-  main.innerHTML = htmlString;
 };
+
 template();
+
