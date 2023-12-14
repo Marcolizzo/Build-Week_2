@@ -1,3 +1,4 @@
+/*
 @font-face {
   font-family: Cereal-Bd;
   src: url(./assets/font/AirbnbCereal_W_Bd.otf);
@@ -27,11 +28,12 @@
   font-family: Cereal-Xbd;
   src: url(./assets/font/AirbnbCereal_W_XBd.otf);
 }
+*/
 
 /*CARD*/
 .card {
-  /* font-family: montserrat; */
-  font-family: Cereal-Bk;
+  font-family: montserrat;
+ /* font-family: Cereal-Bk;*/
   margin-top: 5%;
 }
 
