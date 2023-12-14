@@ -10,3 +10,15 @@
   border: none;
   padding-block: 10px;
 }
+
+.main-logo {
+  width: 130px;
+}
+.link-item-hover {
+  color: black;
+  text-decoration: none;
+}
+
+.link-item-hover:hover {
+  text-decoration: underline black;
+}
