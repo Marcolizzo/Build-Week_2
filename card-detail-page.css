@@ -22,3 +22,7 @@
 .link-item-hover:hover {
   text-decoration: underline black;
 }
+
+.copertina{
+max-height: 35rem;
+}

@@ -1331,14 +1331,16 @@ let homes = [
   },
 ];
 const template = function () {
-  main = document.querySelector("#main");
+  main = document.querySelector("main");
   // let htmlString = "";
   for (let i = 0; i < homes.length; i++) {
     // const home = homes[i];
     var params = new URLSearchParams(window.location.search);
     var id = params.get('id')
-    if (id === homes[i].id ) {
-    main.innerHTML +=`<div class="d-flex flex-column"
+    if (id === homes[i].id) {
+      main.innerHTML += `<div class="container">
+    <div class="d-flex flex-column gap-3">
+      <div class="d-flex flex-column">
         <h2 class="m-0">${homes[i].name}</h2>
         <div class="d-flex justify-content-between align-items-center">
           <a href="" class="text-black">${homes[i].street}</a>
@@ -1381,11 +1383,10 @@ const template = function () {
           </div>
         </div>
       </div>
-    
-      <div class="card overflow-hidden rounded-4" style="height: 35rem">
-        <img src="./assets/1.webp" alt="" class="img-fluid" />
+      <div class="card overflow-hidden rounded-4" ">
+        <img src="${homes[i].picture_urls[0]}" alt="copertina" class="copertina object-fit-cover" />
       </div>
-    
+
       <div class="row">
         <aside class="col-6 d-flex flex-column gap-3">
           <div class="d-flex flex-column gap-3 pt-4">
@@ -1433,7 +1434,7 @@ const template = function () {
               <li class="list-group-item">${homes[i].bathrooms} bagni</li>
             </ul>
           </div>
-    
+
           <div class="d-flex gap-5 pt-4 pb-4 border-top border-bottom">
             <div class="ps-2">
               <svg
@@ -1454,7 +1455,7 @@ const template = function () {
             </div>
             <h5>Cancellazione gratuita entro il giorno 3 gennaio</h5>
           </div>
-    
+
           <div class="d-flex flex-column gap-4 pt-4 pb-5 border-bottom">
             <div class="card p-2 px-3 bg-body-secondary border-0">
               <p class="m-0">
@@ -1504,7 +1505,7 @@ const template = function () {
               </button>
             </div>
           </div>
-    
+
           <div class="d-flex flex-column gap-3 pt-4 pb-5 border-bottom">
             <h5>Cosa troverai</h5>
             <div class="d-flex justify-content-between">
@@ -1517,7 +1518,7 @@ const template = function () {
                 <li class="list-group-item pb-3">Campo da tennis</li>
                 <li class="list-group-item pb-3">Wi-fi</li>
               </ul>
-    
+
               <ul class="ps-0">
                 <li class="list-group-item pb-3">Maggiordomo</li>
                 <li class="list-group-item pb-3">Cuoco</li>
@@ -1537,7 +1538,7 @@ const template = function () {
               </button>
             </div>
           </div>
-    
+
           <div class="d-flex flex-column gap-2 pt-4 pb-5 border-bottom">
             <div>
               <h5>Servizi aggiuntivi</h5>
@@ -1547,7 +1548,7 @@ const template = function () {
                 quelli elencati.
               </p>
             </div>
-    
+
             <div class="d-flex justify-content-between">
               <div class="d-flex gap-3">
                 <div>
@@ -1566,7 +1567,7 @@ const template = function () {
                 </div>
                 <p>Trasferimento aeroportuale</p>
               </div>
-    
+
               <div class="d-flex gap-3">
                 <div>
                   <svg
@@ -1585,9 +1586,11 @@ const template = function () {
                 <p>Trasferimento aeroportuale</p>
               </div>
             </div>
-    
-            <p class="pt-5">Vorresti richiedere un servizio che non trovi?</p>
-    
+
+            <p class="pt-5">
+              Vorresti richiedere un servizio che non trovi?
+            </p>
+
             <div>
               <button
                 type="button"
@@ -1597,11 +1600,14 @@ const template = function () {
               </button>
             </div>
           </div>
-    
+
           <div class="d-flex flex-column gap-2 pt-4 pb-5 border-bottom">
             <h5>7 notti a ${homes[i].street}</h5>
             <p>3 mar 2024 - 10 mar 2024</p>
-            <img src="./assets/ScreenShot Tool -20231213212034.png" alt="" />
+            <img
+              src="./assets/ScreenShot Tool -20231213212034.png"
+              alt=""
+            />
             <div class="d-flex justify-content-end">
               <button
                 type="button"
@@ -1612,7 +1618,7 @@ const template = function () {
             </div>
           </div>
         </aside>
-    
+
         <aside class="col-6 d-flex justify-content-center">
           <div class="pt-4">
             <div
@@ -1646,13 +1652,11 @@ const template = function () {
                     Non riceverai alcun addebito in questa fase
                   </p>
                   <p class="m-0">
-                    Il prezzo totale del viaggio include l'IVA e tutti i costi
-                    applicabili
+                    Il prezzo totale del viaggio include l'IVA e tutti i
+                    costi applicabili
                   </p>
                   <div class="d-flex justify-content-between mt-3">
-                    <a href="" class="text-black">${
-                      homes[i].price * 7
-                    } € x 7 notti</a>
+                    <a href="" class="text-black">${homes[i].price * 7} € x 7 notti </a>
                     <p>${homes[i].price} €</p>
                   </div>
                 </div>
@@ -1664,7 +1668,188 @@ const template = function () {
             </div>
           </div>
         </aside>
-      </div>`;      
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="d-flex flex-column justify-content-center border-top bg-body-secondary"
+  >
+    <div class="pt-5 pb-5"></div>
+    <div class="container">
+      <img src="./assets/logo-pink.png" alt="" class="main-logo" />
+      <h2 class="pb-4 pt-4">
+        Case straordinarie con valutazioni a cinque stelle in ogni categoria
+      </h2>
+      <p>
+        Oltre a essere impeccabili e progettate con cura, tutte le case
+        Airbnb Luxe <br />
+        sono complete di servizi e dotazioni di lusso, e includono un
+        designer di viaggi <br />
+        dedicato.
+      </p>
+      <div class="d-flex gap-2">
+        <a href="" class="text-black fw-bold">Per saperne di più</a>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            fill="currentColor"
+            class="bi bi-chevron-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="pt-5 pb-5"></div>
+  </div>
+
+  <div class="container border-top">
+    <div class="d-flex flex-column gap-3 border-bottom pt-5 pb-5">
+      <h4>Posizione</h4>
+      <p>Blevio, Lombardia, Italia</p>
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5559.022882705869!2d9.097579350773033!3d45.84106260859811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47869df0c2977a1f%3A0x8fc7b71b2172b711!2s22020%20Blevio%20CO!5e0!3m2!1sit!2sit!4v1702575009191!5m2!1sit!2sit"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="w-100"
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="pt-5 pb-5 border-bottom">
+      <h4 class="pb-3">Da sapere</h4>
+      <div class="d-flex justify-content-between">
+        <div class="card border-0 col-4">
+          <h5>Regole della casa</h5>
+          <ul class="list-group list-group-flush gap-2">
+            <li class="list-group-item border-0 p-0">
+              Check-in dopo le ore 15:00
+            </li>
+            <li class="list-group-item border-0 p-0">
+              Check-out entro le ore 10:00
+            </li>
+            <li class="list-group-item border-0 p-0">Massimo 14 ospiti</li>
+            <li class="list-group-item border-0 p-0 pt-2">
+              <div class="d-flex gap-2">
+                <a href="" class="text-black fw-bold">Mostra altro</a>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    fill="currentColor"
+                    class="bi bi-chevron-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card border-0 col-4">
+          <h5>Alloggio e sicurezza</h5>
+          <ul class="list-group list-group-flush gap-2">
+            <li class="list-group-item border-0 p-0">
+              Nessun rilevatore di monossido di carbonio
+            </li>
+            <li class="list-group-item border-0 p-0">
+              Nessun rilevatore di fumo
+            </li>
+            <li class="list-group-item border-0 p-0">
+              Telecamera di sicurezza o dispositivo di registrazione
+            </li>
+            <li class="list-group-item border-0 p-0 pt-2">
+              <div class="d-flex gap-2">
+                <a href="" class="text-black fw-bold">Mostra altro</a>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    fill="currentColor"
+                    class="bi bi-chevron-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card border-0 col-4">
+          <h5>Termini di cancellazione</h5>
+          <ul class="list-group list-group-flush gap-2">
+            <li class="list-group-item border-0 p-0">
+              Cancellazione gratuita entro il giorno 3 gen.
+            </li>
+            <li class="list-group-item border-0 p-0">
+              Leggi i termini di cancellazione completi dell'host, che si
+              applicano anche in caso di malattia o disagi legati alla
+              pandemia di COVID-19.
+            </li>
+            <li class="list-group-item border-0 p-0 pt-2">
+              <div class="d-flex gap-2">
+                <a href="" class="text-black fw-bold">Mostra altro</a>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    fill="currentColor"
+                    class="bi bi-chevron-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column gap-3 pt-5 pb-5 border-bottom">
+      <h4>Villa Front Lake</h4>
+      <p>
+        Ogni prenotazione Airbnb Luxe prevede un designer di viaggi: il tuo
+        concierge, trip planner ed esperto della destinazione locale.
+        Conosce questo alloggio da <br />
+        cima a fondo.
+      </p>
+      <div>
+        <button type="button" class="btn btn-outline-secondary fw-semibold">
+          Invia un messaggio a uin desginer di viaggi
+        </button>
+      </div>
+    </div>
+  </div>`;
     }
 
   }
