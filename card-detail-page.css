@@ -26,3 +26,11 @@
 .copertina{
 max-height: 35rem;
 }
+
+.miniCopertina{
+  max-height: 20rem;
+}
+
+aside>div>div {
+  height: 25rem;
+}

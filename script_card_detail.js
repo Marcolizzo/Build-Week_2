@@ -1493,8 +1493,8 @@ const template = function () {
               <h5 class="fst-italic fw-normal">Ospitalità di</h5>
               <h5>${homes[i].host_name}</h5>
             </div>
-            <div class="card overflow-hidden" style="height: 20rem">
-              <img src="${homes[i].picture_urls[0]}" alt="" />
+            <div class="card overflow-hidden">
+              <img src="${homes[i].picture_urls[0]}" alt="" class="miniCopertina object-fit-cover" />
             </div>
             <div>
               <button
@@ -1622,9 +1622,7 @@ const template = function () {
         <aside class="col-6 d-flex justify-content-center">
           <div class="pt-4">
             <div
-              class="card sticky-top rounded-4 p-4 shadow p-3 mb-5 bg-body-tertiary rounded"
-              style="width: 25rem"
-            >
+              class="card sticky-top rounded-4 p-4 shadow p-3 mb-5 bg-body-tertiary rounded">
               <div class="card-body d-flex flex-column gap-3 p-0">
                 <div class="d-flex gap-2 align-items-center">
                   <h4 class="card-title">${homes[i].price} €</h4>
