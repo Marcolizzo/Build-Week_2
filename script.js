@@ -1460,8 +1460,8 @@ const link = function(event){
     }
   }
 }
-const cards_img = document.querySelectorAll('.card-collector .carousel-item img');
-for (let i = 0; i < cards_img.length; i++) {
-    cards_img[i].addEventListener("click", link);
-    
-}
+  const cards_img = document.querySelectorAll('.card-collector .carousel-item img');
+  for (let i = 0; i < cards_img.length; i++) {
+      cards_img[i].addEventListener("click", link);
+      
+  }
