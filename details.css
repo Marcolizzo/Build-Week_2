@@ -1,6 +1,38 @@
+@font-face {
+  font-family: Cereal-Bd;
+  src: url(./assets/font/AirbnbCereal_W_Bd.otf);
+}
+
+@font-face {
+  font-family: Cereal-Bk;
+  src: url(./assets/font/AirbnbCereal_W_Bk.otf);
+}
+
+@font-face {
+  font-family: Cereal-Blk;
+  src: url(./assets/font/AirbnbCereal_W_Blk.otf);
+}
+
+@font-face {
+  font-family: Cereal-Lt;
+  src: url(./assets/font/AirbnbCereal_W_Lt.otf);
+}
+
+@font-face {
+  font-family: Cereal-Md;
+  src: url(./assets/font/AirbnbCereal_W_Md.otf);
+}
+
+@font-face {
+  font-family: Cereal-Xbd;
+  src: url(./assets/font/AirbnbCereal_W_XBd.otf);
+}
+
 /*CARD*/
 .card {
-  font-family: montserrat;
+  /* font-family: montserrat; */
+  font-family: Cereal-Bk;
+  margin-top: 5%;
 }
 
 p {
@@ -24,9 +56,11 @@ img {
   aspect-ratio: 1/1;
   object-fit: cover;
 }
+
 ion-icon {
-  fill: none;
-  stroke: grey;
+  color: white;
+  fill: black;
+  fill-opacity: 50%;
   stroke-width: 5%;
 }
 
