@@ -44,7 +44,7 @@ const homes = [
     bedrooms: 2,
     beds: 2,
     price: 80,
-    review_scores_rating: null,
+    review_scores_rating: 92,
     picture_urls: [
       "https://a0.muscache.com/im/pictures/miso/Hosting-848341774182969784/original/80f73145-5824-488f-b494-0157424632fc.jpeg?im_w=720",
       "https://a0.muscache.com/im/pictures/cfc3cc62-d102-4b12-9dce-56db6bbb519d.jpg?im_w=720",
@@ -70,7 +70,7 @@ const homes = [
     bedrooms: 2,
     beds: 3,
     price: 350,
-    review_scores_rating: null,
+    review_scores_rating: 96,
     picture_urls: [
       "https://a0.muscache.com/im/pictures/cfc3cc62-d102-4b12-9dce-56db6bbb519d.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/9943f897-4302-474c-9d6f-395a86d2dc72.jpg?im_w=720",
@@ -123,7 +123,7 @@ const homes = [
     bedrooms: 1,
     beds: 1,
     price: 25,
-    review_scores_rating: null,
+    review_scores_rating: 98,
     picture_urls: [
       "https://a0.muscache.com/im/pictures/miso/Hosting-1011370998103824032/original/7123e9c9-9dcd-480f-83c7-450411444f74.jpeg?im_w=720",
       "https://a0.muscache.com/im/pictures/miso/Hosting-1011370998103824032/original/2e85d996-3103-46cc-be3b-f6cd22387ec8.jpeg?im_w=720",
@@ -202,7 +202,7 @@ const homes = [
     bedrooms: 1,
     beds: 1,
     price: 300,
-    review_scores_rating: null,
+    review_scores_rating: 100,
     picture_urls: [
       "https://a0.muscache.com/im/pictures/miso/Hosting-51908650/original/a647c45d-9233-4a3e-9205-c910bc19aeaf.jpeg?im_w=720",
       "https://a0.muscache.com/im/pictures/8794bd91-dc69-4249-bf54-082c8d778155.jpg?im_w=720",

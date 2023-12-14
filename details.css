@@ -43,12 +43,18 @@
 .navbar p {
   font-size: 0.9em;
 }
-
-button.rounded-pill {
-  border: 1px solid black;
+.dropdown button:hover{
+  box-shadow: 0px 3px 3px gainsboro;
+}
+.dropdown button {
+  border: 1px solid gray;
   padding-inline: 2px;
 }
-
+.dropdown-item a{
+  text-decoration: none;
+  color: inherit;
+}
+.dropdow
 
 /*CARD*/
 .card {
@@ -79,7 +85,7 @@ img {
   object-fit: cover;
 }
 
-ion-icon {
+.card-collector ion-icon {
   color: white;
   fill: black;
   fill-opacity: 50%;
