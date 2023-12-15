@@ -78,6 +78,10 @@ ion-icon[name="globe-outline"]:hover{
 .mini-nav p{
   border-bottom: 2px solid black;
 }
+.mini-nav .col-1:hover{
+  scale: 1.2;
+}
+
 /*CARD*/
 .card {
   font-family: montserrat;
