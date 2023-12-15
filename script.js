@@ -1335,7 +1335,7 @@ const insertCard = function () {
   for (let i = 0; i < homes.length; i++) {
     const home = homes[i];
     row = document.querySelector(".card-collector");
-    row.innerHTML += `<div class="col-lg-3 col-md-6">
+    row.innerHTML += `<div class="col-xl-3 col-lg-4 col-md-6">
     <div class="card border-0" style="width: 18rem" id="pippo">
       <div class="card-img-top">
         <div id="carouselExampleIndicators${i}" class="carousel slide">
