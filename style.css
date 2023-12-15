@@ -29,26 +29,26 @@
   font-family: Cereal-Xbd;
   src: url(./assets/font/AirbnbCereal_W_XBd.otf);
 }
-*{
-  font-family: 'Cereal,Sean-sarif';
+* {
+  font-family: "Cereal,Sean-sarif";
 }
 /* NAVBAR */
 .navbar img {
   object-fit: contain;
 }
-ion-icon[name="globe-outline"]{
+ion-icon[name="globe-outline"] {
   color: white;
   font-size: large;
 }
-ion-icon[name="globe-outline"]:hover{
+ion-icon[name="globe-outline"]:hover {
   scale: 1.2;
   transition: transform 0.3s ease-in-out;
 }
 .navbar {
   width: 90%;
   margin-inline: auto;
-  color: white;
 }
+
 .navbar p {
   font-size: 0.9em;
   font-weight: bold;
@@ -57,25 +57,26 @@ ion-icon[name="globe-outline"]:hover{
 .navbar p:hover {
   scale: 1.1;
 }
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
-.dropdown button:hover{
+#dropdownMenuButton1:hover {
   box-shadow: 0px 3px 3px #ff385c;
   background-color: white;
 }
-.dropdown button {
+#dropdownMenuButton1 {
   border: 1px solid gray;
   padding-inline: 2px;
   background-color: white;
 }
-.dropdown-item a{
+.dropdown-item a {
   text-decoration: none;
   color: black;
 }
-.dropdown-item a:hover{
-  background-color: gainsboro;
+.dropdown-item a:hover {
+  background-color: rgb(0, 0, 0);
 }
 .navbar .search-nav {
   color: black;
@@ -84,7 +85,7 @@ input[type="number"]::-webkit-outer-spin-button {
   color: black;
   font-size: 0.8em;
 }
-.search-nav ion-icon[name="search-outline"]{
+.search-nav ion-icon[name="search-outline"] {
   background-color: #ff385c !important;
   color: white;
   font-size: xx-small;
