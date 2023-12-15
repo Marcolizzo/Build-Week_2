@@ -1464,3 +1464,5 @@ const link = function(event){
       cards_img[i].addEventListener("click", link);
       
   }
+
+  

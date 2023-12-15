@@ -1331,12 +1331,12 @@ let homes = [
   },
 ];
 const template = function () {
-  main = document.querySelector("main");
+  main = document.querySelector(".main");
   // let htmlString = "";
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get('id')
   for (let i = 0; i < homes.length; i++) {
     // const home = homes[i];
-    var params = new URLSearchParams(window.location.search);
-    var id = params.get('id')
     if (id === homes[i].id) {
       main.innerHTML += `<div class="container">
     <div class="d-flex flex-column gap-3">
