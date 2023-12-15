@@ -17,22 +17,28 @@
       <!-- NAVBAR -->
       <nav class="navbar navbar-light bg-black">
         <div class="row w-100">
-          <div class="col-4">
-            <a class="navbar-brand  m-0" href="#">
+          <div class="col-2 col-sm-2 col-md-3 col-lg-4">
+            <a class="navbar-brand  m-0" href="./details.html">
               <img src="./assets/logo.png" alt="" width="94" height="56">
             </a>
           </div>
-          <div class="col-5">
-            <div class="d-flex justify-content-around">
-              <div><p>Places to stay</p></div>
-              <div><p>Experiences</p></div>
-              <div><p>Online Experiences</p></div>
+          <div class="col-6 col-sm-6 col-md-5 col-lg-5">
+            <div class="row justify-content-around">
+              <div class="col-4 text-nowrap"><p>Places to stay</p></div>
+              <div class="col-4 text-nowrap"><p>Experiences</p></div>
+              <div class="col-4 text-nowrap"><p>Online Experiences</p></div>
             </div>
           </div>
-          <div class="col-3 d-flex align-items-center justify-content-end gap-3">
-            <p class="m-0">Become a host</p>
-            <div class="d-flex"><a href=""><ion-icon name="globe-outline"></ion-icon></a></div>
-          <div class="dropdown">
+          <div class="col-4 col-sm-4 col-md-4 col-lg-3 d-flex align-items-center justify-content-end">
+            <div class="row">
+              <div class="col-5 d-flex align-items-center d-none d-md-flex">
+                <p class="m-0 text-nowrap">Become a host</p>
+              </div>
+              <div class="col-2 d-flex align-items-center"><a href="">
+                <ion-icon name="globe-outline"></ion-icon></a>
+              </div>
+
+              <div class="dropdown col-5">
                 <button class="btn rounded-pill" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   <div class="d-flex align-items-center gap-3 px-2 w-100">
                     <ion-icon
@@ -77,8 +83,8 @@
                 </ul>
               </div>
         </div>      
-
-      <div class="d-none d-md-block search-nav w-50 mx-auto d-flex justify-content-center bg-black">
+      </div>
+      <div class="d-none d-lg-block search-nav w-50 mx-auto d-flex justify-content-center bg-black">
         <div class="row rounded-pill bg-light pt-1 pb-2 m-0">
           <div class="col-3">
             <div class="row">

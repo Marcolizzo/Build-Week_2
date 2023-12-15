@@ -1372,5 +1372,6 @@ const near = function(event){
 }
 search_icon.onclick = near  
 
-
+var larghezzaSchermo = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+console.log("Larghezza schermo"+larghezzaSchermo);
 
