@@ -23,14 +23,10 @@
   text-decoration: underline black;
 }
 
-.copertina{
-max-height: 35rem;
+.copertina {
+  max-height: 35rem;
 }
 
-.miniCopertina{
+.miniCopertina {
   max-height: 20rem;
-}
-
-aside>div>div {
-  height: 25rem;
 }
