@@ -109,6 +109,7 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: #e41e56;
   padding: 15px;
 }
+/* FOOTER */
 
 /* ALTRO */
 header {
@@ -119,43 +120,32 @@ header {
   font-size: small;
 }
 
-/* .x-small{
+.x-small{
   font-size: x-small;
 }
 
 .xx-small{
   font-size: xx-small;
-} */
-
-h1 {
-  font-size: 100pt;
+}
+.jumbotron img{
+  object-fit: contain;
+}
+header h1 {
+  font-size: 60pt;
+  font-weight: bold;
+  line-height: 0.8;
+  color: white;
   /* margin-block: 30%; */
-  line-height: 120px;
 }
-
-body {
-  overflow-x: hidden;
-}
-
 img {
   object-fit: cover;
 }
 
 .logo {
-  width: 100px;
+  width: 70px;
   aspect-ratio: 1/1;
-  object-fit: cover;
+  object-fit: fill;
 }
-
-.background {
-  background-image: url(/assets/home.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 1300px;
-  max-height: 1200px;
-}
-
 .link-item-hover {
   color: black;
   text-decoration: none;
