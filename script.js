@@ -1452,7 +1452,6 @@ const openPage = function(id){
   window.location.href = 'card-detail-page.html?id=' + id
 }
 const link = function(event){
-
   for (let i = 0; i < homes.length; i++) {
     if (event.target.parentElement.id === homes[i].id) {
       openPage(homes[i].id)

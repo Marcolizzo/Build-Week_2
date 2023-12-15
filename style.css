@@ -1,48 +1,92 @@
+/* FONT */
+
+@font-face {
+  font-family: Cereal-Bd;
+  src: url(./assets/font/AirbnbCereal_W_Bd.otf);
+}
+
+@font-face {
+  font-family: Cereal-Bk;
+  src: url(./assets/font/AirbnbCereal_W_Bk.otf);
+}
+
+@font-face {
+  font-family: Cereal-Blk;
+  src: url(./assets/font/AirbnbCereal_W_Blk.otf);
+}
+
+@font-face {
+  font-family: Cereal-Lt;
+  src: url(./assets/font/AirbnbCereal_W_Lt.otf);
+}
+
+@font-face {
+  font-family: Cereal-Md;
+  src: url(./assets/font/AirbnbCereal_W_Md.otf);
+}
+
+@font-face {
+  font-family: Cereal-Xbd;
+  src: url(./assets/font/AirbnbCereal_W_XBd.otf);
+}
+*{
+  font-family: 'Cereal,Sean-sarif';
+}
 /* NAVBAR */
 .navbar img {
   object-fit: contain;
 }
-
+ion-icon[name="globe-outline"]{
+  color: white;
+  font-size: large;
+}
+ion-icon[name="globe-outline"]:hover{
+  scale: 1.2;
+  transition: transform 0.3s ease-in-out;
+}
 .navbar {
   width: 90%;
   margin-inline: auto;
+  color: white;
 }
-
 .navbar p {
   font-size: 0.9em;
 }
-
-button.rounded-pill {
-  border: 1px solid black;
-  padding-inline: 2px;
+.dropdown button:hover{
+  box-shadow: 0px 3px 3px #ff385c;
+  background-color: white;
 }
-
+.dropdown button {
+  border: 1px solid gray;
+  padding-inline: 2px;
+  background-color: white;
+}
+.dropdown-item a{
+  text-decoration: none;
+  color: black;
+}
+.dropdown-item a:hover{
+  background-color: gainsboro;
+}
 .navbar .search-nav {
   color: black;
 }
-
 .navbar .search-nav b {
   color: black;
   font-size: 0.8em;
 }
-
-.search-nav ion-icon {
+.search-nav ion-icon[name="search-outline"]{
   background-color: #ff385c !important;
   color: white;
   font-size: xx-small;
+  cursor: pointer;
 }
-
 .search-nav input {
   border: none;
   outline: none;
   color: gray;
   font-size: 0.9em;
 }
-
-.navbar * {
-  color: white;
-}
-
 .search {
   min-width: 860px;
   border-radius: 500px;
