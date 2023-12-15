@@ -1331,47 +1331,52 @@ const homes = [
     },
   ];
 
-let tmpHomes = [];
-const destination = document.querySelector('.search-nav input[type="text"]:first-child')
-const guests = document.querySelector('.search-nav input[type="number"]')
 const search_icon = document.querySelector('.search-nav ion-icon[name="search-outline"]')
 const modal_body = document.querySelector('.modal-body .carousel-inner')
 
 const near = function(event){
+  const destination = document.querySelector('.search-nav input[type="text"]')
+  const guests = document.querySelector('.search-nav input[type="number"]')
+  let tmpHomes = [];
+  modal_body.innerHTML = ''
     let c = 0;
-    if (guests.value !==undefined && destination.value !== '') {
-    
+    if (guests.value !=='' && destination.value !== '') {
         for (let i = 0; i < homes.length; i++) {
             if (homes[i].street.toLocaleLowerCase().includes(destination.value.toLowerCase()) && guests.value <= homes[i].beds) {
-              // console.log(homes[i].street.toLocaleLowerCase().includes(destination.value.toLowerCase()) +' e '+guests.value <= homes[i].beds );
                 tmpHomes.push(homes[i]);
                 c++;  
-                c > 0 ? '' : alert('Nessun viaggio trovato')
             }
-            console.log(tmpHomes.length);
+          }
+
+        c > 0 ? '' : alert('Nessun viaggio trovato')
+        console.log(tmpHomes);
+        for (let j = 0; j < tmpHomes.length; j++) {
+            modal_body.innerHTML += `<div class="carousel-item ${j === 0 ? "active" : ""}" data-bs-interval="10000">
+            <div class="row">
+              <div class="col-7"><img src="${tmpHomes[j].host_thumbnail_url}" alt="" class="w-100">
+              </div>
+              <div class="col-5 bg-light">
+                <div class="row">
+                  <div class="col-12">${tmpHomes[j].property_type}</div>
+                  <div class="col-12">${tmpHomes[j].street}</div>
+                  <div class="row">
+                    <div class="col-6">Letti: ${tmpHomes[j].beds}</div>
+                    <div class="col-6 text-nowrap">Prezzo: ${tmpHomes[j].price}</div>
+                  </div>
+                  <div class="col-12">Valutazione: ${tmpHomes[j].review_scores_rating}</div>
+                </div>
+              </div>
+            </div>
+          </div>`
         }
-         
-        // for (let j = 0; j < tmpHomes.length; j++) {
-        //     modal_body.innerHTML += `<div class="carousel-item ${j === 0 ? "active" : ""}" data-bs-interval="10000">
-        //     <div class="row">
-        //       <div class="col-8"><img src="${tmpHomes[j].host_thumbnail_url[0]}" alt="" class="w-100">
-        //       </div>
-        //       <div class="col-4 bg-primary">
-        //         <div class="row">
-        //           <div class="col-12">${tmpHomes[j].property_type}</div>
-        //           <div class="col-12">${tmpHomes[j].street}</div>
-        //           <div class="col-12">body</div>
-        //           <div class="col-12">footer</div>
-        //         </div>
-        //       </div>
-        //     </div>
-        //   </div>`
-        // }
     }
-   else('inserisci qualcosa dio canaglia')
+    else{
+      alert('Inserisci qualcosa')
+    }
+    
 }
 search_icon.onclick = near  
 
-var larghezzaSchermo = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-console.log("Larghezza schermo"+larghezzaSchermo);
+// var larghezzaSchermo = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+// console.log("Larghezza schermo"+larghezzaSchermo);
 
