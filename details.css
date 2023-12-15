@@ -29,7 +29,12 @@
   src: url(./assets/font/AirbnbCereal_W_XBd.otf);
 }
 */
-
+.small{
+  font-size: small;
+}
+.x-small{
+  font-size: x-small;
+}
 /* NAVBAR */
 .navbar img {
   object-fit: contain;
@@ -64,6 +69,14 @@ ion-icon[name="globe-outline"]{
 ion-icon[name="globe-outline"]:hover{
   scale: 1.2;
   transition: transform 0.3s ease-in-out;
+}
+/* MINI-NAV */
+
+.mini-nav .row ion-icon{
+  color: gray;
+}
+.mini-nav p{
+  border-bottom: 2px solid black;
 }
 /*CARD*/
 .card {
