@@ -54,8 +54,17 @@
   text-decoration: none;
   color: inherit;
 }
-.dropdow
-
+.dropdown-item a:hover{
+  background-color: gainsboro;
+}
+ion-icon[name="globe-outline"]{
+  font-size: large;
+  color: black;
+}
+ion-icon[name="globe-outline"]:hover{
+  scale: 1.2;
+  transition: transform 0.3s ease-in-out;
+}
 /*CARD*/
 .card {
   font-family: montserrat;

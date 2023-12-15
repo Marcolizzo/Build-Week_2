@@ -1343,29 +1343,30 @@ const near = function(event){
     
         for (let i = 0; i < homes.length; i++) {
             if (homes[i].street.toLocaleLowerCase().includes(destination.value.toLowerCase()) && guests.value <= homes[i].beds) {
+              // console.log(homes[i].street.toLocaleLowerCase().includes(destination.value.toLowerCase()) +' e '+guests.value <= homes[i].beds );
                 tmpHomes.push(homes[i]);
-                console.log(tmpHomes.length);
                 c++;  
                 c > 0 ? '' : alert('Nessun viaggio trovato')
             }
+            console.log(tmpHomes.length);
         }
-         console.log(tmpHomes.lenght);
-        for (let j = 0; j < tmpHomes.length; j++) {
-            modal_body.innerHTML += `<div class="carousel-item ${j === 0 ? "active" : ""}" data-bs-interval="10000">
-            <div class="row">
-              <div class="col-8"><img src="./assets/Spiaggia.png" alt="" class="w-100">
-              </div>
-              <div class="col-4 bg-primary">
-                <div class="row">
-                  <div class="col-12">header</div>
-                  <div class="col-12">body</div>
-                  <div class="col-12">body</div>
-                  <div class="col-12">footer</div>
-                </div>
-              </div>
-            </div>
-          </div>`
-        }
+         
+        // for (let j = 0; j < tmpHomes.length; j++) {
+        //     modal_body.innerHTML += `<div class="carousel-item ${j === 0 ? "active" : ""}" data-bs-interval="10000">
+        //     <div class="row">
+        //       <div class="col-8"><img src="${tmpHomes[j].host_thumbnail_url[0]}" alt="" class="w-100">
+        //       </div>
+        //       <div class="col-4 bg-primary">
+        //         <div class="row">
+        //           <div class="col-12">${tmpHomes[j].property_type}</div>
+        //           <div class="col-12">${tmpHomes[j].street}</div>
+        //           <div class="col-12">body</div>
+        //           <div class="col-12">footer</div>
+        //         </div>
+        //       </div>
+        //     </div>
+        //   </div>`
+        // }
     }
    else('inserisci qualcosa dio canaglia')
 }
