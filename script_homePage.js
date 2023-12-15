@@ -1357,7 +1357,7 @@ const near = function(event){
               </div>
               <div class="col-5 bg-light">
                 <div class="row">
-                  <div class="col-12">${tmpHomes[j].property_type}</div>
+                  <div class="col-12">Tipo: ${tmpHomes[j].property_type}</div>
                   <div class="col-12">${tmpHomes[j].street}</div>
                   <div class="row">
                     <div class="col-6">Letti: ${tmpHomes[j].beds}</div>
